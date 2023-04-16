@@ -1,10 +1,6 @@
-# TruckApplication
+# FirApplication
+The Masai Truck Application is a web-based application that helps to manage the trucks and their information. The application has three different roles: manager, driver, and guest. The manager can view all the details of the trucks, update or delete them. On the other hand, the driver can view only his own truck details, update or delete them. And the guest can only register themselves into the system.
 
-
-# BookStoreApplication
-Masai Book Store Application is a web application for a book store that allows users to register, login, browse books, add books to their cart, and purchase books. The application also includes features like tracking popular authors, refreshing the cart, analyzing the most number of unique books that the user can buy, and deleting an author
-
-#Technologies Used
 
 # Tech Stack
 - Java
@@ -17,6 +13,20 @@ Masai Book Store Application is a web application for a book store that allows u
 - Maven
 
 
+# Features
+- Users can register themselves into the system as a driver, manager, or guest.
+- Users can log into the system and get a JWT token that is valid for 24 hours.
+- Managers can view all the trucks in the system and their details, update or delete them.
+- Drivers can view only their own truck details, update or delete them.
+- Guests can register themselves into the system.
+
+
+# Modules
+
+- Login Module
+- User Module
+- Truck Module
+
 
 
 
@@ -27,12 +37,16 @@ Masai Book Store Application is a web application for a book store that allows u
 - Update the port number, username and password as per your local database configuration.
 
 ```
-    server.port=8080
+   server.port=8080
 
-    spring.datasource.url=jdbc:mysql://localhost:3306/TruckDB;
-    spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
-    spring.datasource.username=root
-    spring.datasource.password=root
+spring.datasource.url=jdbc:mysql://localhost:3306/MasaiTruckDB
+spring.datasource.username=root
+spring.datasource.password=root
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.format_sql=true
 ```
 
 # API Root Endpoint
@@ -42,6 +56,3 @@ https://localhost:8080/
 ```
 http://localhost:8080/swagger-ui/
 ```
-
-Authentication
-The application uses Spring Security for authentication. Users can register and log in with their email and password.
