@@ -1,4 +1,4 @@
-# FirApplication
+# TruckApplication
 The Masai Truck Application is a web-based application that helps to manage the trucks and their information. The application has three different roles: manager, driver, and guest. The manager can view all the details of the trucks, update or delete them. On the other hand, the driver can view only his own truck details, update or delete them. And the guest can only register themselves into the system.
 
 
